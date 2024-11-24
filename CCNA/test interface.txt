@@ -1,0 +1,21 @@
+connect console cable pc to swtich rs 232 to console
+show ip interface brief 
+interace vlan 1 
+no shutdown
+*verify the vlan1 interface changed from down to up using show ip interface
+
+now connect pc2 to second switch
+go to terminal of pc
+enable 
+show ip interface brief
+*assign ip address to vlan1
+interface vlan 1
+ip address 192.169.1.1 255.255.255.1
+no shutdown
+*check the ip address and state of interface by show ip interface
+
+
+test end to end connectivity
+
+ping 192.168.1.2
+check it from cmd
